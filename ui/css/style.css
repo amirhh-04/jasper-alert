@@ -1,0 +1,63 @@
+.hide {
+	display :none;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+	font-size: 32px;
+	letter-spacing: 1px;
+	paint-order: stroke
+}
+
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: transparent;
+	overflow: hidden;
+	margin: 0;
+	padding: 0
+}
+
+* {
+    user-select: none;
+}
+
+.alert-menu {
+	display :none;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    width: 16%;
+    height: auto;
+	background-color: #262626!important;
+    box-shadow: 0 0 20px #fc8d1dec !important;
+    border-radius: 13px;
+    border: 2px solid #e97a0cec;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+    padding: 4%;
+    text-align: center;
+    background: linear-gradient(90deg,#ff963b,#d87e2f);
+    color: #202020;
+    font-weight: bold;
+	border-radius: 10px 10px 0 0;
+    font-size: 1.9vh;
+}
+
+.message {
+    border-radius: 10px 10px 0 0;
+	font-size: 1.2vh;
+	width: 100%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 2.5%;
+    padding-top: 1.5%;
+}
+
