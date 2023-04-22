@@ -1,6 +1,8 @@
 Config = {}
 
 Config.FrameWork           = "ESX" -- Only support => QBCORE(qb-core) and ESX
+Config.getSharedObject = "esx:getSharedObject"
+Config.qb_Core = "qb-core"
 
 ---- (Command) ----
 Config.CommandName = "salert" -- /Config.CommandName => /odashcam

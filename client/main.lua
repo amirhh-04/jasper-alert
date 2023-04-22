@@ -9,13 +9,15 @@ local frameWork = Config.FrameWork
 local allowedJobsData = Config.allowedJobsData
 local checkPhoneOn = Config.checkPhoneOn
 local checkDivision = Config.checkDivision
+local getSharedObject = Config.getSharedObject
+local qb_Core = Config.qb_Core
 
 local checkOnDuty = Config.checkOnDuty
 
 if frameWork == 'ESX' then
     Citizen.CreateThread(function()
         while not ESX do
-            TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+            TriggerEvent(getSharedObject, function(obj) ESX = obj end)
             Citizen.Wait(0)
         end
 
@@ -25,7 +27,7 @@ if frameWork == 'ESX' then
         PlayerData = ESX.GetPlayerData()
     end)
 elseif frameWork == 'QBCORE' then
-    QBCore = exports['qb-core']:GetCoreObject()
+    QBCore = exports[qb_Core]:GetCoreObject()
     PlayerData = QBCore.Functions.GetPlayerData()
 end
 if frameWork == 'ESX' then

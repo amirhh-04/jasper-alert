@@ -9,13 +9,16 @@ local CommandName = Config.CommandName
 local checkOnDuty = Config.checkOnDuty
 local checkPhoneOn = Config.checkPhoneOn
 local checkDivision = Config.checkDivision
+local getSharedObject = Config.getSharedObject
+local qb_Core = Config.qb_Core
 
 if frameWork == "QBCORE" then
-	QBCore = exports["qb-core"]:GetCoreObject()
+	QBCore = exports[qb_Core]:GetCoreObject()
 elseif frameWork == "ESX" then
-	TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+	TriggerEvent(getSharedObject, function(obj) ESX = obj end)
 end
 
+---@diagnostic disable-next-line: missing-parameter
 RegisterCommand(CommandName, function(source, args)
 	local source = source
 	local message = table.concat(args, " ", 1)
